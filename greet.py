@@ -11,20 +11,24 @@ user_name = input("Plz enter your Name:\n")
 user_age  = input("Plz enter your Age:\n")
 
 while not checkValidInteger(user_age):
-   user_age = input("The number you entered is invalid, Plz enter your right Age:\n")
+   user_age = input("The number you entered is invalid, Plz enter a valid Age:\n")
 
 
-greeting = f"Hello, {user_name}! Nice to meet you."
+
 current_year = datetime.datetime.now().year
 year_to_reach_100 = current_year + (100-int(user_age))
-year_100_msg = f"Did you know, you will turn 100 in year {year_to_reach_100}!."
 
+greeting = f"Hello, {user_name}! Nice to meet you."
+year_100_msg = f"Did you know, you will turn 100 in year {year_to_reach_100}!."
+if int(user_age) >= 100:
+    year_100_msg = f"Congratulations on reaching the incredible milestone of living over 100 years! Your resilience and wisdom are truly remarkable, and your legacy will continue to inspire generations to come." 
 
 print(greeting, end="\n")
-if int(user_age) < 100:
-    print(year_100_msg, end="\n")
+print(year_100_msg, end="\n")
 
 
+
+# Add quotes as an output based on Age to give out a customized greeting
 
 # quotes
 
